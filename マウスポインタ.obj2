@@ -1,5 +1,8 @@
+--information:マウスポインタ r2 by 猫愛
+--label:カスタムオブジェクト
+
 --track@tr_size:サイズ,  1, 100, 10,  1
---track@cursor_type:タイプ,  1,  10,  1,  1
+--select@cursor_type:タイプ=1,矢印=1,矢印(旧スタイル)=2,選択=3,選択(旧スタイル)=4,文字入力=5,サイズ変更=6,サイズ変更(斜)=7,移動=8,中指=9,中指(旧スタイル)=10
 --color@col0:色,0xffffff
 --color@col1:縁色,0x000000
 
@@ -172,6 +175,26 @@ local function get_data(p_type,o,m)
     }
   elseif p_type == 7 then
     data = {
+      {i,i,i,i,i,i,i,i,i,i,m,m,m,m,m,m,m},
+      {i,i,i,i,i,i,i,i,i,i,m,o,o,o,o,o,m},
+      {i,i,i,i,i,i,i,i,i,i,i,m,o,o,o,o,m},
+      {i,i,i,i,i,i,i,i,i,i,i,i,m,o,o,o,m},
+      {i,i,i,i,i,i,i,i,i,i,i,m,o,m,o,o,m},
+      {i,i,i,i,i,i,i,i,i,i,m,o,m,i,m,o,m},
+      {i,i,i,i,i,i,i,i,i,m,o,m,i,i,i,m,m},
+      {i,i,i,i,i,i,i,i,m,o,m,i,i,i,i,i,i},
+      {i,i,i,i,i,i,i,m,o,m,i,i,i,i,i,i,i},
+      {i,i,i,i,i,i,m,o,m,i,i,i,i,i,i,i,i},
+      {m,m,i,i,i,m,o,m,i,i,i,i,i,i,i,i,i},
+      {m,o,m,i,m,o,m,i,i,i,i,i,i,i,i,i,i},
+      {m,o,o,m,o,m,i,i,i,i,i,i,i,i,i,i,i},
+      {m,o,o,o,m,i,i,i,i,i,i,i,i,i,i,i,i},
+      {m,o,o,o,o,m,i,i,i,i,i,i,i,i,i,i,i},
+      {m,o,o,o,o,o,m,i,i,i,i,i,i,i,i,i,i},
+      {m,m,m,m,m,m,m,i,i,i,i,i,i,i,i,i,i}
+    }
+  elseif p_type == 8 then
+    data = {
       {i,i,i,i,i,i,i,i,i,i,i,m,i,i,i,i,i,i,i,i,i,i,i},
       {i,i,i,i,i,i,i,i,i,i,m,o,m,i,i,i,i,i,i,i,i,i,i},
       {i,i,i,i,i,i,i,i,i,m,o,o,o,m,i,i,i,i,i,i,i,i,i},
@@ -195,26 +218,6 @@ local function get_data(p_type,o,m)
       {i,i,i,i,i,i,i,i,i,m,o,o,o,m,i,i,i,i,i,i,i,i,i},
       {i,i,i,i,i,i,i,i,i,i,m,o,m,i,i,i,i,i,i,i,i,i,i},
       {i,i,i,i,i,i,i,i,i,i,i,m,i,i,i,i,i,i,i,i,i,i,i}
-    }
-  elseif p_type == 8 then
-    data = {
-      {i,i,i,i,i,i,i,i,i,i,m,m,m,m,m,m,m},
-      {i,i,i,i,i,i,i,i,i,i,m,o,o,o,o,o,m},
-      {i,i,i,i,i,i,i,i,i,i,i,m,o,o,o,o,m},
-      {i,i,i,i,i,i,i,i,i,i,i,i,m,o,o,o,m},
-      {i,i,i,i,i,i,i,i,i,i,i,m,o,m,o,o,m},
-      {i,i,i,i,i,i,i,i,i,i,m,o,m,i,m,o,m},
-      {i,i,i,i,i,i,i,i,i,m,o,m,i,i,i,m,m},
-      {i,i,i,i,i,i,i,i,m,o,m,i,i,i,i,i,i},
-      {i,i,i,i,i,i,i,m,o,m,i,i,i,i,i,i,i},
-      {i,i,i,i,i,i,m,o,m,i,i,i,i,i,i,i,i},
-      {m,m,i,i,i,m,o,m,i,i,i,i,i,i,i,i,i},
-      {m,o,m,i,m,o,m,i,i,i,i,i,i,i,i,i,i},
-      {m,o,o,m,o,m,i,i,i,i,i,i,i,i,i,i,i},
-      {m,o,o,o,m,i,i,i,i,i,i,i,i,i,i,i,i},
-      {m,o,o,o,o,m,i,i,i,i,i,i,i,i,i,i,i},
-      {m,o,o,o,o,o,m,i,i,i,i,i,i,i,i,i,i},
-      {m,m,m,m,m,m,m,i,i,i,i,i,i,i,i,i,i}
     }
   elseif p_type == 9 then
     data = {

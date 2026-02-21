@@ -4,14 +4,15 @@
 
 ![sample](image.jpg)
 
-### [導入方法](https://github.com/nea-c/AviUtl-Scripts/blob/master/aviutl2/README.md)
-
 ## 最新 / Latest
 
-**r1**
+**r2**
 
 
 ## 変更履歴 / Change log
 
+- r2
+  - タイプ指定を番号から選択式に変更
+
 - r1
-    - AviUtl2バージョンのリリース
+  - AviUtl2バージョンのリリース
